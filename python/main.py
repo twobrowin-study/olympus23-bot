@@ -1,5 +1,9 @@
 import os, sys, json, dotenv
-from spreadsheetbot import SpreadSheetBot, Log, DEBUG
+from ext.spreadsheetbot_ext import SpreadSheetBotExt, Log, DEBUG
+
+from ext.switch import SwitchAdapterClass
+from ext.groups import GroupsAdapterClass
+from ext.i18n import I18nAdapterClass
 
 if "DOCKER_RUN" in os.environ:
     Log.info("Running in docker environment")
@@ -18,7 +22,7 @@ SWITCH_UPDATE_TIME   = int(os.environ.get('SWITCH_UPDATE_TIME'))
 SETTINGS_UPDATE_TIME = int(os.environ.get('SETTINGS_UPDATE_TIME'))
 
 if __name__ == "__main__":
-    bot = SpreadSheetBot(
+    bot = SpreadSheetBotExt(
         BOT_TOKEN,
         SHEETS_ACC_JSON,
         SHEETS_LINK,
