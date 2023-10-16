@@ -3,4 +3,5 @@
 **/__pycache__
 **/.env
 **/hosts.ini
+**/inventory.yaml
 **/secrets.yaml
