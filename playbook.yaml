@@ -8,7 +8,7 @@
 
     - name: Run bot docker service
       docker_swarm_service:
-        name: spreadsheet-bot
+        name: olympus23-bot
         image: twobrowin/olympus23-bot:1.0.0
         env:
           TZ: "Europe/Moscow"
